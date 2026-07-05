@@ -13,8 +13,6 @@ public class Opera extends MusicalShow{
 
     @Override
     public String toString() {
-        return "Opera{" +
-                "choirSize=" + choirSize +
-                '}';
+        return super.toString() + "\nХор: " + choirSize + " человек";
     }
 }

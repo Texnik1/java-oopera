@@ -26,9 +26,6 @@ public class MusicalShow extends Show{
 
     @Override
     public String toString() {
-        return "MusicalShow{" +
-                "musicAuthor='" + musicAuthor + '\'' +
-                ", librettoText='" + librettoText + '\'' +
-                '}';
+        return super.toString() + "\nАвтор музыки: " + musicAuthor;
     }
 }

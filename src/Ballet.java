@@ -13,8 +13,6 @@ public class Ballet extends MusicalShow{
 
     @Override
     public String toString() {
-        return "Ballet{" +
-                "choreographer='" + choreographer + '\'' +
-                '}';
+        return super.toString() + "\nХореограф: " + choreographer;
     }
 }

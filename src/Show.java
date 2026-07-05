@@ -58,6 +58,15 @@ public class Show {
 
     // Заменить актёра по фамилии на нового
     public void replaceActorBySurname(Actor newActor, String oldSurname) {
+        // Сначала проверяем, есть ли уже такой актёр в списке
+        if (listOfActors.contains(newActor)) {
+            System.out.println("Предупреждение: актёр " + newActor.getName() + " "
+                    + newActor.getSurname() + " (рост " + newActor.getHeight()
+                    + ") уже участвует в спектакле \"" + title + "\". Замена не выполнена.");
+            return;
+        }
+
+        // Ищем актёра для замены по фамилии
         int index = -1;
         for (int i = 0; i < listOfActors.size(); i++) {
             if (listOfActors.get(i).getSurname().equals(oldSurname)) {
